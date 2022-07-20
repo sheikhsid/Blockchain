@@ -6,7 +6,7 @@ function Blockchain () {
     this.pendingTransactions = [];
 }
 
-//Add Module in Function
+//Add Block in Function
 
 Blockchain.prototype.createNewBlock = function (nonce, prevBlockHash, hash){
 
@@ -24,5 +24,16 @@ Blockchain.prototype.createNewBlock = function (nonce, prevBlockHash, hash){
 
     return newBlock;
 }
+
+// Get Last Completed Block
+
+Blockchain.prototype.getLastBlock = function(){
+    return this.chain [this.chain.length -1];
+}
+
+// Add New Transactions Function
+
+
+
 
 module.exports = Blockchain;
