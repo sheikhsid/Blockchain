@@ -1,6 +1,6 @@
 //Main Funtion
 
-function Blockchain (){
+function Blockchain () {
 
     this.chain = [];
     this.pendingTransactions = [];
