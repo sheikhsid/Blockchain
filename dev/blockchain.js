@@ -33,7 +33,18 @@ Blockchain.prototype.getLastBlock = function(){
 
 // Add New Transactions Function
 
+Blockchain.prototype.createNewTransaction = function (amount, sender, recipient){
+    
+    const newTransaction = {
+        amount : amount,
+        sender : sender,
+        recipient : recipient
+    }
 
+    this.pendingTransactionn.push(newTransaction);
+    
+    return this.getLastBlock() ['index'] + 1;
+}
 
 
 module.exports = Blockchain;
