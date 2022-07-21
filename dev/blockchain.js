@@ -1,7 +1,6 @@
 //Main Funtion
 
 function Blockchain () {
-
     this.chain = [];
     this.pendingTransactions = [];
 }
@@ -16,10 +15,10 @@ Blockchain.prototype.createNewBlock = function (nonce, prevBlockHash, hash){
         transactions : this.pendingTransactions,
         nonce : nonce,
         prevBlockHash : prevBlockHash,
-        hash : hash,
+        hash : hash
     };
 
-    this.pendingTransactionn = [];
+    this.pendingTransactions = [];
     this.chain.push(newBlock);
 
     return newBlock;
@@ -41,10 +40,12 @@ Blockchain.prototype.createNewTransaction = function (amount, sender, recipient)
         recipient : recipient
     }
 
-    this.pendingTransactionn.push(newTransaction);
+    this.pendingTransactions.push(newTransaction);
     
     return this.getLastBlock() ['index'] + 1;
 }
 
+
+//Export File
 
 module.exports = Blockchain;
